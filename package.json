@@ -1,0 +1,25 @@
+{
+  "name": "server-ultimate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "local": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "P1ckN1ck",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "eslint": "8.22.0",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "router": "^1.3.7"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.7.1"
+  }
+}
