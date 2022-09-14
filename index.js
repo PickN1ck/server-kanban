@@ -5,7 +5,7 @@ const cors = require('./core/cors');
 const parseResponse = require('./core/parseResponse');
 const routes = require('./core/Routes');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 logger(app);
 parseResponse(app);
