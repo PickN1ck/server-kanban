@@ -1,12 +1,15 @@
 const express = require('express');
-const errorHandler = require('./core/errorHandler');
-const logger = require('./core/logger');
-const cors = require('./core/cors');
-const parseResponse = require('./core/parseResponse');
-const routes = require('./core/Routes');
+const errorHandler = require('./modules/core/errorHandler');
+const logger = require('./modules/core/logger');
+const cors = require('./modules/core/cors');
+const parseResponse = require('./modules/core/parseResponse');
+const routes = require('./modules/core/Routes');
+const dbConnection = require('./modules/core/dbConnection');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+dbConnection();
 logger(app);
 parseResponse(app);
 cors(app);
