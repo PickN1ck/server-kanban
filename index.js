@@ -6,7 +6,6 @@ const routes = require('./modules/core/Routes');
 const dbConnection = require('./modules/core/dbConnection');
 
 const cors = require('./modules/core/cors');
-const corsDb = require('./modules/core/cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 dbConnection();
 logger(app);
 parseResponse(app);
-corsDb(app);
+cors(app);
 routes(app);
 
 errorHandler(app);
