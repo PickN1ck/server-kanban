@@ -37,7 +37,7 @@ const cors = require('cors');
 const corsModule = (app) => {
   app.use(
     cors({
-      origin: process.env.CLIENT_HOST,
+      origin: 'http://localhost:3000',
       credentials: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       preflightContinue: false,
